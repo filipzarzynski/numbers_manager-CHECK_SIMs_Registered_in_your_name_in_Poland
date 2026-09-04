@@ -1,0 +1,11 @@
+services:
+  telcoaudit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telcoaudit-pro-mvp
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
